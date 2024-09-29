@@ -1,0 +1,16 @@
+1. 
+I try to keep as much business logic out of the front end code as possible, which does allow for an easier transition between interfaces. 
+But as i wrote a react app frontend the entire user interface interaction and output would need to be rewritten. If i was going to implement a new UI, i would go back through and pull out logic that could be reused into the utils file. Then i would move the state management to the new format either just variables if a simple terminal REPL or i could move to a global state management system like redux. This would allow me to reuse most of the code with minimal changes and then the bulk of the change would be re-implementing user input collection, error handling and output display. 
+If moving to a terminal based REPL i would further remove all logic around checking the input string and adding to the map to the utils file and then have the user input and output handled in the same file . keeping more separation between view and data manipulation.
+
+
+2.
+I would move to the code to a new Git repo and then set up a CI/CD Pipeline using CircleCi or Jenkins that would run checks on linting and code quality and also auto run the tests with every push to make sure nothing gets broken. This would also build the production version of the app ready to deploy. 
+I would then need to choose a hosting platform, most likely a cloud based service like AWS and then set that up to host the file. So create a new bucket, then upload the build files, and configure the domain and allow static web hosting. Ideally this would all be automated eventually. 
+I would then set up a monitoring tools like Google Analytics or Sentry to tack user interactions and behavior and error reporting. This would allow me to catch errors or bugs in production and fix them quickly.
+
+
+3. 
+It wasn't super clear at first that we are doing a tally of numbers entered by the user, that then displays and has different inputs effecting the outputs. But other than that i had a bunch of fun. 
+
+
