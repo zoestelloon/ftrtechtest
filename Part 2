@@ -1,0 +1,32 @@
+1. You have a new requirement to implement for your application: its logic should stay exactly the same but it will need to have a different user interface (e.g. if you wrote a web app, a different UI may be a REPL). Please describe how you would go about implementing this new UI in your application? Would you need to restructure your solution in any way?
+
+
+
+2. You now need to make your application “production ready”, and deploy it so that it can be used by customers. Please describe the steps you’d need to take for this to happen.
+
+- Deploy the Application, 
+Choose a hosting platform based on your requirements. Here are a few options:
+
+Static Hosting (e.g., Netlify, Vercel):
+
+Push your code to a Git repository (GitHub, GitLab, etc.).
+Connect your repository to the hosting service.
+Configure build settings (most platforms automatically detect React apps).
+Cloud Providers (e.g., AWS, Azure, Google Cloud):
+
+Create a new bucket (for AWS S3) or web app (for Azure App Service).
+Upload your build files.
+Set up a CDN (optional) for better performance.
+Custom Server (e.g., Express.js):
+
+Create an Express server to serve your static files.
+Deploy on a cloud service or a VPS (like DigitalOcean).
+Use Docker for containerization to simplify deployment.
+7. Monitor and Maintain
+Monitoring: Use tools like Google Analytics for usage statistics and error monitoring services (like Sentry) for runtime errors.
+Continuous Integration/Continuous Deployment (CI/CD): Set up CI/CD pipelines to automate testing and deployment processes.
+
+
+3. What did you think about this coding test - is there anything you’d suggest in order to improve it?
+
+    It wasn't super clean that we are doing a tally of number entered to the user, that then displays and has different inputs effecting the outputs. But other than that i had a bunch of fun. 
